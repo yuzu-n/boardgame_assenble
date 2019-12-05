@@ -10,6 +10,7 @@ module.exports = {
     mode: MODE,
     entry: {
         "style": "./src/style.scss",
+        "index": "./src/index.js"
     },
     output: {
         //  出力ディレクトリ
@@ -18,21 +19,32 @@ module.exports = {
  
         // 出力ファイル名
         // [name]はentryがハッシュの場合、keyで置換される
-        //filename: '[name].bundle.js'
+        filename: '[name]-[contentHash].js'
     },
     module: {
         rules: [
+        {
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader'
+            }
+        },
         {
             test: /\.s[ac]ss$/i,
             use: [
                 MiniCssExtractPlugin.loader,
                 'css-loader',
-                'sass-loader',
-            ],
+                'sass-loader'
+            ]
+        },
+        {
+            test: /\.(jpe?g|png)$/,
+            loaders: 'url-loader'    
         }
     ]},
     plugins: [
-        new CleanWebpackPlugin(),
+        //new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: './css/[name]-[contentHash].css',
         }),
