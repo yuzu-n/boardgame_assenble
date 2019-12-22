@@ -44,7 +44,9 @@ module.exports = {
         }
     ]},
     plugins: [
-        //new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: ['**/*.html','**/*.js','**/*.css']
+        }),
         new MiniCssExtractPlugin({
             filename: './css/[name]-[contentHash].css',
         }),
