@@ -66,5 +66,29 @@ p {
 .next-schedule {
     color: $font_color;
 }
+.gmap {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 75%;
+    position: relative;
+}
+.gmap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 .question {
+}
+footer {
+    margin-top: 35px;
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 15px;
+    background-color: #dddddd;
+}
+footer p {
+    font-size: 12px;
+    margin: 0;
 }
