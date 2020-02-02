@@ -1,0 +1,10 @@
+!.gitignore
+.htaccess
+*.php
+*.txt
+*.html
+wp-admin
+wp-includes
+!wp-content/plugins
+!wp-content/themes
+
