@@ -1,1 +1,1 @@
-docker-compose exec db mysqldump -u wordpress -pwordpress -d wordpress > db_backup.sql 
+docker-compose exec db mysqldump -u wordpress -pwordpress -B wordpress > db_backup.sql 
