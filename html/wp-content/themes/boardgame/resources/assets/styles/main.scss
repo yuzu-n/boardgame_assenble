@@ -12,6 +12,8 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
+
+/*
 @import "common/global";
 @import "components/buttons";
 @import "components/comments";
@@ -23,3 +25,5 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+ */
+@import "style.scss";

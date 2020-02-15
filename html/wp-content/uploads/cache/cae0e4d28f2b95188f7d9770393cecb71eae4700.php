@@ -1,9 +1,7 @@
-@extends('layouts.app')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
   <article>
     <div class="main-container">
-      @include('partials.page-header')
+      <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
       <section id="what">
         <div class="container">
@@ -11,18 +9,21 @@
             <h2 class="section-title">はじめに</h2>
           </div>
 
-          @if (!have_posts())
+          <?php if(!have_posts()): ?>
             <div class="alert alert-warning">
-              {{ __('Sorry, no results were found.', 'sage') }}
+              <?php echo e(__('Sorry, no results were found.', 'sage')); ?>
+
             </div>
-            {!! get_search_form(false) !!}
-          @endif
+            <?php echo get_search_form(false); ?>
 
-          @while (have_posts()) @php the_post() @endphp
-          @include('partials.content-'.get_post_type())
-          @endwhile
+          <?php endif; ?>
 
-          {!! get_the_posts_navigation() !!}
+          <?php while(have_posts()): ?> <?php the_post() ?>
+          <?php echo $__env->make('partials.content-'.get_post_type(), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          <?php endwhile; ?>
+
+          <?php echo get_the_posts_navigation(); ?>
+
 
           <div class="row">
             <h3 class="section-subTitle">オープン会って？</h3>
@@ -115,4 +116,6 @@
       </section>
     </div>
   </article>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
