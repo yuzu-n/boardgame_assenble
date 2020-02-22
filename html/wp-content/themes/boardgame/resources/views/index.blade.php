@@ -110,7 +110,9 @@
           <div class="row">
             <h2 class="section-title">お問い合わせ</h2>
           </div>
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdIrtk6Y25gn102lx5SOb4vR-CaQTcqm5PCcWGzEe0Z67NPyQ/viewform?embedded=true" width="100%" height="620" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+          <div class="row justify-content-center">
+            <?php echo do_shortcode('[contact-form-7 id="16" title="お問い合わせフォーム"]'); ?>
+          </div>
         </div>
       </section>
     </div>

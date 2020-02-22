@@ -99,8 +99,6 @@ function load_style() {
 add_action('wp_enqueue_scripts', 'load_style');
 
 function load_script() {
-    wp_enqueue_script('jQuery', "https://code.jquery.com/jquery-3.2.1.slim.min.js", array());
-    wp_enqueue_script('popper', "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", array());
     wp_enqueue_script('bootstrap', "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", array());
 }
 
