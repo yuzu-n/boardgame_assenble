@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap");
+
 $base_font_size: 16px;
-$section_font: "Noto Serif JP", serif;
-$sentence_font: "Sawarabi Gothic", sans-serif;
-$font_color: #09f;
+$section_font: "M PLUS Rounded 1c", sans-serif;
+$sentence_font: "M PLUS Rounded 1c", sans-serif;
+$font_color: #000626;
 $entry_title_color: #09f;
+$title_color: #fef9ed;
 
 .nav {
   padding: 16px;
   font-family: $section_font;
-  background-color: #9cf;
+  background-color: #000626;
 }
 
 .menu-item {
@@ -19,7 +22,7 @@ $entry_title_color: #09f;
 }
 
 body {
-  background: radial-gradient(ellipse, #cf9, #cfd);
+  background-color: #fef9ed;
 }
 
 #what {
@@ -91,7 +94,7 @@ footer {
     font-weight: bold;
     font-size: 3.2em;
     font-family: $section_font;
-    color: #f9c;
+    color: $title_color;
     top: 70%;
     left: 16px;
   }
